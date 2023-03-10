@@ -1,0 +1,26 @@
+state={
+	id=480
+	name="STATE_480"
+	provinces={
+		1569 4284 7185 8718 8761 
+	}
+	manpower = 24325850
+	
+	history={
+		41038.1.1 = {
+			owner = CAL 
+			add_core_of = CAL 
+		}
+		victory_points = {
+			4284 25
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 1
+			arms_factory = 1 
+		}
+	}
+	state_category = megalopolis
+	buildings_max_level_factor=1.000
+}

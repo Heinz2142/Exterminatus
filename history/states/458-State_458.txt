@@ -1,0 +1,22 @@
+state={
+	id=458
+	name="STATE_458"
+	provinces={
+		890 1361 2510 3991 7772 8656 8665 8684 8696 8700 8709 8719 8721 
+	}
+	history={
+		41038.1.1 = {
+			owner = CAL 
+			add_core_of = CAL 
+		}
+
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 1
+			arms_factory = 1 
+		}
+	}
+	state_category = rural 
+	buildings_max_level_factor=1.000
+}

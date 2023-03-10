@@ -1,0 +1,22 @@
+state={
+	id=544
+	name="STATE_544"
+	provinces={
+		3164 3416 4848 
+	}
+	history={
+		41038.1.1 = {
+			owner = CAL 
+			add_core_of = CAL 
+		}
+
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 1
+			arms_factory = 1 
+		}
+	}
+	state_category = rural 
+	buildings_max_level_factor=1.000
+}

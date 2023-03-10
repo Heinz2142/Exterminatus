@@ -1,0 +1,25 @@
+
+state={
+	id=1282
+	name="STATE_1282"
+	provinces={
+		1094 1816 1905 2190 2197 2921 4316 4736 5192 5760 6326 6382 11149 11169 11186 11202 11268 11285 11348 
+	}
+	manpower = 500000
+
+	history={
+		41038.1.1 = {
+			owner = CAL 
+			add_core_of = CAL 
+		}
+
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 1
+			arms_factory = 1 
+		}
+	}
+	state_category = rural 
+	buildings_max_level_factor=1.000
+}

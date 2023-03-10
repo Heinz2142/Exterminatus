@@ -1,0 +1,22 @@
+state={
+	id=849
+	name="STATE_849"
+	provinces={
+		526 4328 5187 7235 7325 7386 7504 9988 9999 10020 10054 
+	}
+	history={
+		41038.1.1 = {
+			owner = CAL 
+			add_core_of = CAL 
+		}
+
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 1
+			arms_factory = 1 
+		}
+	}
+	state_category = rural 
+	buildings_max_level_factor=1.000
+}

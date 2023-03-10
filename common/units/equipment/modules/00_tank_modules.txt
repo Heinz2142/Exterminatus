@@ -1,0 +1,810 @@
+equipment_modules = {
+
+### Engine Types
+
+	tank_calmurn_engine = {
+		abbreviation = "bce"
+		category = tank_engine_type
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			build_cost_ic = 3
+			fuel_consumption = 2
+			reliability = 0.25
+		}
+		multiply_stats = {
+			maximum_speed = 0.15
+			fuel_consumption = -0.5
+		}
+
+	}
+
+	tank_calmurn_unlimited_engine = {
+		abbreviation = "bcu"
+		category = tank_engine_type
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			build_cost_ic = 3 
+			fuel_consumption = 2
+		}
+		multiply_stats = {  
+		maximum_speed = 0.2
+		fuel_consumption = -0.1
+		}
+	}
+
+	tank_turbine_engine = {
+		abbreviation = "tur"
+		category = tank_engine_type
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			fuel_consumption = 2
+			build_cost_ic = 4
+			maximum_speed = 2
+		}
+		multiply_stats = {
+			build_cost_ic = 0.15
+			fuel_consumption = 0.2
+		}
+	}
+
+	tank_turbine_unlimited_engine = {
+		abbreviation = "tuu"
+		category = tank_engine_type
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			build_cost_ic = 4
+			fuel_consumption = 4
+			reliability = -0.25
+			maximum_speed = 2
+		}
+
+		multiply_stats = {
+			build_cost_ic = 0.15
+			maximum_speed = 0.35
+			fuel_consumption = 0.3
+		}
+	}
+
+	###Armor Types
+
+	tank_riveted_armor = {
+		abbreviation = "riv"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 2
+			breakthrough = 2
+		}
+		xp_cost = 8
+		multiply_stats = {
+			build_cost_ic = -0.075
+			armor_value = 0.2
+
+		}
+	}
+
+	tank_cast_armor = {
+		abbreviation = "cas"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 4
+			breakthrough = 4
+		}
+		xp_cost = 8
+		multiply_stats = {
+			build_cost_ic = 0.2
+			armor_value = 0.5
+
+		}
+	}
+
+	tank_welded_armor = {
+		abbreviation = "wel"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+		xp_cost = 8
+		add_stats = {
+			defense = 2
+			breakthrough = 2
+		}
+
+		multiply_stats = {
+			armor_value = 0.4
+
+		}
+	}
+
+	###Suspension Types Machine spirits 	-	-	-	-	--	-	-	-	-	-	-	-		--	-	-	-	--	-	-	
+
+	tank_torsion_bar_suspension = {
+		abbreviation = "tor"
+		category = tank_suspension_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			build_cost_ic = 3
+			reliability = 0.1
+		}
+		multiply_stats = {
+		}
+	}
+
+	tank_christie_suspension = {
+		abbreviation = "chr"
+		category = tank_suspension_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			build_cost_ic = 3
+		}
+		multiply_stats =  {
+			maximum_speed = 0.2
+		}
+	}
+
+	tank_bogie_suspension = {
+		abbreviation = "bog"
+		category = tank_suspension_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			build_cost_ic = 2
+		}
+	}
+
+	tank_interleaved_suspension = {
+		abbreviation = "int"
+		category = tank_suspension_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			build_cost_ic = 3
+			breakthrough = 4
+			reliability = -0.1
+		}
+		multiply_stats =  {
+		}
+	}
+
+	tank_wheeled_suspension = {
+		abbreviation = "whe"
+		category = tank_non_tracked_suspension_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			build_cost_ic = 1
+			reliability = -0.25
+		}
+		multiply_stats =  {
+			#build_cost_ic = -0.1
+			hardness = -0.3
+		}
+	}
+
+	tank_half_track_suspension = {
+		abbreviation = "htr"
+		category = tank_non_tracked_suspension_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			build_cost_ic = 1.5
+			reliability = -0.15
+		}
+		multiply_stats =  {
+			#build_cost_ic = -0.05
+			hardness = -0.2
+		}
+	}
+	###	-	-	-	-	-	-	-		-	-	-	-	-	-	-	-	-	-	-	-	--	-	
+	###Turret Types - light
+	### turrets are split by chassis to make it easier to control which guns they can mount
+
+	tank_medium_two_man_tank_turret = {
+		abbreviation = "m2m"
+		category = tank_medium_turret_type
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 2.5
+			breakthrough = 16
+		}
+		xp_cost = 2
+		multiply_stats = {
+		}
+
+	}
+
+	tank_medium_three_man_tank_turret = {
+		abbreviation = "m3m"
+		category = tank_medium_turret_type
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 3
+			maximum_speed = -0.2
+			breakthrough = 20
+		}
+		xp_cost = 2
+		multiply_stats = {
+	
+		}
+
+	}
+
+	tank_medium_fixed_superstructure_turret = {
+		abbreviation = "mfs"
+		category = tank_medium_turret_type
+		sfx = sfx_ui_sd_module_turret
+		forbid_equipment_type = anti_air
+
+		allowed_module_categories = {
+			main_armament_slot = {
+				tank_heavy_main_armament
+			}
+		}
+		forbid_equipment_type_exact_match_for_category = {
+			tank_heavy_main_armament = armor
+			tank_super_heavy_main_armament = armor
+		}
+
+		xp_cost = 2
+		add_stats = {
+			build_cost_ic = 2.5
+			reliability = 0.2
+			defense = 3
+		}
+
+		multiply_stats = {
+			breakthrough = -0.25
+		}
+
+	}
+	### Here goes Heavy turrets 	-------------------------------------------------------------------------------------------------------
+	tank_heavy_two_man_tank_turret = {
+		abbreviation = "h2m"
+		category = tank_heavy_turret_type
+		sfx = sfx_ui_sd_module_turret
+
+		allowed_module_categories = {
+			main_armament_slot = {
+				tank_heavy_main_armament
+			}
+		}
+		xp_cost = 2
+		add_stats = {
+			build_cost_ic = 5
+			breakthrough = 18
+		}
+
+		multiply_stats = {
+			
+		}
+
+	}
+
+	tank_heavy_three_man_tank_turret = {
+		abbreviation = "h3m"
+		category = tank_heavy_turret_type
+		sfx = sfx_ui_sd_module_turret
+
+		allowed_module_categories = {
+			main_armament_slot = {
+				tank_heavy_main_armament
+			}
+		}
+		xp_cost = 2
+		add_stats = {
+			build_cost_ic = 5.5
+			maximum_speed = -0.25
+			breakthrough = 22
+		}
+
+		multiply_stats = {
+			
+		}
+
+	}
+
+	tank_heavy_fixed_superstructure_turret = {
+		abbreviation = "hfs"
+		category = tank_heavy_turret_type
+		sfx = sfx_ui_sd_module_turret
+		forbid_equipment_type = anti_air
+
+		allowed_module_categories = {
+			main_armament_slot = {
+				tank_super_heavy_main_armament
+			}
+		}
+		forbid_equipment_type_exact_match_for_category = {
+			tank_super_heavy_main_armament = armor
+		}
+
+		xp_cost = 2
+		add_stats = {
+			build_cost_ic = 5
+			reliability = 0.2
+			defense = 3
+		}
+
+		multiply_stats = {
+			breakthrough = -0.25
+		}
+
+	}
+	###	------------------------------------------------------------------------------------------------------------------------------------
+	### Here goes Super heavy
+	tank_super_heavy_three_man_tank_turret = {
+		abbreviation = "s3m"
+		category = tank_super_heavy_turret_type
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 12
+			reliability = -0.1
+			maximum_speed = -0.5
+			breakthrough = 35
+		}
+		xp_cost = 2
+		multiply_stats = {
+			hard_attack = -0.1
+		}
+
+	}
+
+	tank_super_heavy_four_man_tank_turret = {
+		abbreviation = "s4m"
+		category = tank_super_heavy_turret_type
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 10
+			reliability = -0.25
+			maximum_speed = -0.2
+			breakthrough = 24
+		}
+		xp_cost = 2
+		multiply_stats = {
+			
+		}
+
+	}
+	### ------------------------------------------------------------------------------------------------------------------------------------
+
+	###Weapons
+
+	###Leman Russ Guns
+
+
+	tank_exterminator_cannon = {
+		abbreviation = "ext"
+		category = tank_medium_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+
+		add_stats = {
+			soft_attack = 25
+			hard_attack = 8
+			air_attack = 4
+			ap_attack = 20
+			build_cost_ic = 4
+			maximum_speed = -0.1
+			reliability = -0.15
+			breakthrough = 2
+		}
+		xp_cost = 1
+		can_convert_from = { }
+		build_cost_resources = { }
+	}
+
+	tank_nova_cannon = {
+		abbreviation = "enc"
+		category = tank_medium_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		parent = tank_medium_cannon
+		add_stats = {
+			soft_attack = 35
+			hard_attack = 20
+			ap_attack = 35
+			build_cost_ic = 7.5
+			maximum_speed = -0.4
+			reliability = -0.2
+		}
+		xp_cost = 1
+		can_convert_from = { }
+		build_cost_resources = { }
+		### 3 uncommon Resource
+	}
+
+	tank_executioner_cannon = {
+		abbreviation = "exc"
+		category = tank_medium_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+
+		add_stats = {
+			soft_attack = 50
+			hard_attack = 15
+			ap_attack = 60
+			build_cost_ic = 8.5
+			maximum_speed = -0.5
+			reliability = -0.3
+		}
+		xp_cost = 1
+		can_convert_from = { }
+		build_cost_resources = { }
+		### 3 Uncommon and 1 Rare Resource
+	}
+
+	tank_drake_cannon = {
+		abbreviation = "drk"
+		category = tank_medium_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+		add_stats = {
+			soft_attack = 5
+			hard_attack = 25
+			ap_attack = 85
+			build_cost_ic = 4
+			maximum_speed = -0.1
+			reliability = -0.05
+		}
+		xp_cost = 1
+		can_convert_from = { }
+		build_cost_resources = { }
+		### 1 Common Resource
+	}
+
+	tank_twinlas_cannon = {
+		abbreviation = "tlc"
+		category = tank_medium_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+
+		add_stats = {
+			soft_attack = 12
+			hard_attack = 35
+			ap_attack = 125
+			build_cost_ic = 6
+			maximum_speed = -0.3
+			reliability = -0.1
+		}
+		xp_cost = 1
+		can_convert_from = { }
+		build_cost_resources = { }
+		### 2 Uncommon Resource
+	}
+
+	tank_vanquisher_cannon = {
+		abbreviation = "vqc"
+		category = tank_medium_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+		add_stats = {
+			soft_attack = 15
+			hard_attack = 40
+			ap_attack = 200
+			build_cost_ic = 8
+			maximum_speed = -0.4
+			reliability = -0.2
+		}
+		xp_cost = 1
+		can_convert_from = { }
+		build_cost_resources = { }
+		### 3 Uncommon Resource
+	}
+
+	tank_battle_cannon = {
+		abbreviation = "btc"
+		category = tank_small_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+
+		add_stats = {
+			soft_attack = 15
+			hard_attack = 15
+			ap_attack = 55
+			build_cost_ic = 4
+			maximum_speed = -0.2
+			reliability = -0.1
+		}
+		xp_cost = 1
+		can_convert_from = { }
+		build_cost_resources = { }
+	}
+
+	tank_conqueror_cannnon = {
+		abbreviation = "cqc"
+		category = tank_medium_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+
+		add_stats = {
+			soft_attack = 17
+			hard_attack = 12
+			ap_attack = 45
+			build_cost_ic = 3.4
+			maximum_speed = 0
+			reliability = -0.05
+		}
+		xp_cost = 1
+		can_convert_from = { }
+		build_cost_resources = { }
+	}
+
+	tank_punisher_cannon = {
+		abbreviation = "pgc"
+		category = tank_medium_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+
+		add_stats = {
+			soft_attack = 21
+			hard_attack = 15
+			air_attack = 4
+			ap_attack = 70
+			build_cost_ic = 4.5
+			maximum_speed = -0.2
+			reliability = -0.15
+		}
+		xp_cost = 1
+		can_convert_from = { }
+		build_cost_resources = { }
+	}
+
+	tank_demolisher_cannon = {
+		abbreviation = "dmc"
+		category = tank_medium_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+
+		add_stats = {
+			soft_attack = 25
+			hard_attack = 25
+			ap_attack = 90
+			build_cost_ic = 5.5
+			maximum_speed = -0.3
+			reliability = -0.15
+		}
+		xp_cost = 1
+		can_convert_from = { }
+		build_cost_resources = { }
+		### 1 Common Resource
+	}
+
+	###Heavy Tank Guns -----------------------------------------------------------------------------------------------------------------------
+	
+	###---------------------------------------------------------------------------------------------------------------------------------------
+
+	###Special Modules
+
+
+	tank_radio_1 = {
+		abbreviation = "rad1"
+		category = tank_radio_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 1.5
+		}
+		xp_cost = 1
+		multiply_stats = {
+			defense = 0.30
+			breakthrough = 0.30
+		}
+	}
+
+	tank_radio_2 = {
+		abbreviation = "rad2"
+		category = tank_radio_module
+		parent = tank_radio_1
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 3
+		}
+
+		multiply_stats = {
+			defense = 0.60
+			breakthrough = 0.60
+		}
+	}
+
+	sponsons_heavy_bolters = {
+		abbreviation = "shb"
+		category = tank_secondary_turret
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 1.5
+			reliability = -0.05
+			soft_attack = 4
+		}
+		xp_cost = 1
+		multiply_stats = {
+		build_cost_ic = 0.05
+		}
+	}
+
+	sponsons_heavy_flamers = {
+		abbreviation = "shf"
+		category = tank_secondary_turret
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 1.5
+			reliability = -0.05
+			breakthrough = 6
+		}
+		xp_cost = 1
+		multiply_stats = {
+		build_cost_ic = 0.05
+		}
+	}
+
+	sponsons_las_cannons = {
+		abbreviation = "slc"
+		category = tank_secondary_turret
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 1.5
+			reliability = -0.05
+			hard_attack = 4
+			ap_attack = 45
+		}
+		xp_cost = 1
+		multiply_stats = {
+		build_cost_ic = 0.05
+		}
+	}
+
+	sponsons_multi_melta = {
+		abbreviation = "smm"
+		category = tank_secondary_turret
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 1
+			reliability = -0.05
+			hard_attack = 4
+			ap_attack = 45
+		}
+		xp_cost = 1
+		multiply_stats = {
+		build_cost_ic = 0.05
+		}
+		build_cost_resources = { }
+		### 1 Uncommon
+	}
+
+	addon_armor = {
+		abbreviation = "adda"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+		}
+		xp_cost = 1
+		multiply_stats = {
+			armor_value = 0.2
+			build_cost_ic = 0.1
+		}
+	}
+
+	smoke_launchers = {
+		abbreviation = "smok"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 0.5
+			defense = 2
+			breakthrough = 1
+		}
+		xp_cost = 1
+		multiply_stats = {
+
+		}
+	}
+
+	increased_he_load = {
+		abbreviation = "xtrhe"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+		}
+		xp_cost = 1
+		multiply_stats = {
+		soft_attack = 0.20
+		hard_attack = -0.15
+		ap_attack = -0.1
+		}
+	}
+
+	increased_ap_load = {
+		abbreviation = "xtrap"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+		}
+		xp_cost = 1
+		multiply_stats = {
+		soft_attack = -0.20
+		hard_attack = 0.15
+		ap_attack = 0.1
+		}
+	}
+
+	onboard_servitor = {
+		abbreviation = "serv"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			reliability = 0.15
+			build_cost_ic = 1
+		}
+		xp_cost = 1
+		multiply_stats = {
+			
+		}
+	}
+
+	dozer_blade = {
+		abbreviation = "dozer"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			entrenchment = 1
+			breakthrough = 3
+			build_cost_ic = 1.25
+		}
+		xp_cost = 1
+		multiply_stats = {
+			
+		}
+	}
+
+	auto_loader = {
+		abbreviation = "auto"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 1.5
+			breakthrough = 3
+			defense = 3
+		}
+		xp_cost = 1
+		multiply_stats = {
+			build_cost_ic = 0.05
+		}
+	}
+
+	repair_manual = {
+		abbreviation = "rman"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			reliability = 0.1
+		}
+		xp_cost = 5
+		multiply_stats = {
+			
+		}
+	}
+
+}

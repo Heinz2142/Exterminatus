@@ -1,0 +1,23 @@
+state={
+	id=842
+	name="STATE_842"
+	provinces={
+		63 2803 5024 5484 5652 7605 7782 7937 
+	}
+	manpower = 1 
+history={
+victory_points = {
+5024 1
+}
+buildings = {
+infrastructure = 4 
+industrial_complex = 1
+air_base = 1
+arms_factory = 1
+}
+add_core_of = IM2
+owner = IM2
+} 
+state_category = wasteland
+	buildings_max_level_factor=1.000
+}

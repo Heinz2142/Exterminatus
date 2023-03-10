@@ -1,0 +1,26 @@
+
+state={
+	id=709
+	name="STATE_709"
+	provinces={
+		4998 5875 6185 6710 7765 9484 9538 9607 
+	}
+	manpower = 1625850
+
+	history={
+		41038.1.1 = {
+			owner = CAL 
+			add_core_of = CAL 
+		}
+
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 1
+			arms_factory = 1 
+		}
+	}
+	state_category = rural 
+	
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,25 @@
+state={
+	id=960
+	name="STATE_960"
+	provinces={
+		4193 10379 
+	}
+	manpower = 4325850
+	
+	history={
+		victory_points = {
+			4193 1 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 1
+			arms_factory = 1 
+		}
+		add_core_of = FRB 
+		owner = FRB 
+	}
+	
+	state_category = rural 
+	buildings_max_level_factor=1.000
+}

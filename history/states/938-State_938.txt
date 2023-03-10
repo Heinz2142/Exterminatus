@@ -1,0 +1,22 @@
+state={
+	id=938
+	name="STATE_938"
+	provinces={
+		1653 5152 10324 
+	}
+	manpower = 1325850
+	
+	history={
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 1
+			arms_factory = 1 
+		}
+		add_core_of = FRB 
+		owner = FRB 
+	}
+	
+	state_category = rural 
+	buildings_max_level_factor=1.000
+}

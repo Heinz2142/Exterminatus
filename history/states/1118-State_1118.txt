@@ -1,0 +1,31 @@
+state={
+	id=1118
+	name="STATE_1118"
+	provinces={
+		1566 2139 3128 5323 5368 5643 7531 10730 10836 10906 10907 10994 
+	}
+
+	manpower = 4325850
+	
+	history={
+		41038.1.1 = {
+			owner = GOF
+			add_core_of = GOF
+		}
+		victory_points = {
+			5368 1 
+		}
+		victory_points = {
+			10906 1
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 1
+			arms_factory = 1 
+		}
+	}
+	
+	state_category = rural
+	buildings_max_level_factor=1.000
+}
