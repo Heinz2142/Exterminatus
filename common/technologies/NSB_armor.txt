@@ -2,9 +2,12 @@ technologies = {
 
 
 	@1918 = 0
-	@1936 = 2
-	@1938 = 4
-	@1939 = 6
+	@1934 = 2
+	@1935 = 3
+	@1936 = 4
+	@1937 = 5
+	@1938 = 5
+	@1939 = 7
 	@1940 = 7
 	@1941 = 8
 	@1942 = 9
@@ -58,6 +61,7 @@ technologies = {
 			extra_ammo_storage
 			wet_ammo_storage
 			smoke_launchers
+			expanded_fuel_tank
 		}
 		enable_subunits = {
 			light_armor
@@ -189,7 +193,7 @@ technologies = {
 		start_year = 1934
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -4 y = 2 }
+			position = { x = -1 y = 2 }
 		}
 
 		ai_will_do = {
@@ -236,34 +240,26 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
+		path = {
+			leads_to_tech = amphibious_tank_chassis
+			research_cost_coeff = 1
+		}
+
 		research_cost = 2
 		start_year = 1936
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -4 y = 4 }
+			position = { x = -1 y = 4 }
 		}
 
 		ai_will_do = {
 			factor = 1
 
 			modifier = {
-				factor = 2
 				is_major = yes
-				not = {
-					tag = JAP
-					num_of_military_factories < 50
-				}
-			}
-			modifier = {
-				is_major = yes
-				not = { tag = JAP }
 				has_war = yes
 				factor = 10 #you are embarassing yourself
-			}
-			modifier = {
-				tag = SOV
-				factor = 3
 			}
 
 			modifier = {
@@ -282,9 +278,114 @@ technologies = {
 			}
 		}
 
+		on_research_complete = {
+			
+		}
+
 		categories = {
 			armor
 			cat_light_armor
+		}
+	}
+
+
+
+	amphibious_tank_chassis = { #SchwimmPanzer II
+
+		enable_equipments = {
+			amphibious_tank_chassis_1
+		}
+
+		enable_subunits = {
+			amphibious_armor
+		}
+
+		path = {
+			leads_to_tech = amphibious_drive
+			research_cost_coeff = 1
+		}
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+
+		research_cost = 2
+		start_year = 1938
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -4 y = 5 }
+		}
+
+		ai_will_do = {
+			factor = 0.5
+
+			modifier = {
+				not = {
+					any_controlled_state = {
+						is_coastal = yes
+					}
+				}
+				factor = 0
+			}
+		}
+
+		categories = {
+			armor
+			tp_tech
+		}
+	}
+
+	amphibious_drive = { #SchwimmPanzer II
+
+
+		enable_equipment_modules = {
+			amphibious_drive
+		}
+
+		enable_equipments = {
+			light_tank_amphibious_chassis_0
+			medium_tank_amphibious_chassis_0
+			heavy_tank_amphibious_chassis_0
+			light_tank_amphibious_chassis_1
+			medium_tank_amphibious_chassis_1
+			heavy_tank_amphibious_chassis_1
+			light_tank_amphibious_chassis_2
+			medium_tank_amphibious_chassis_2
+			heavy_tank_amphibious_chassis_2
+			light_tank_amphibious_chassis_3
+			medium_tank_amphibious_chassis_3
+			heavy_tank_amphibious_chassis_3
+		}
+
+		research_cost = 2
+		start_year = 1941
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -4 y = 8 }
+		}
+
+		ai_will_do = {
+			factor = 0.5
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				not = {
+					any_controlled_state = {
+						is_coastal = yes
+					}
+				}
+				factor = 0
+			}
+		}
+
+		categories = {
+			armor
+			tp_tech
 		}
 	}
 
@@ -297,17 +398,12 @@ technologies = {
 			light_tank_aa_chassis_3
 		}
 
-		path = {
-			leads_to_tech = main_battle_tank_chassis
-			research_cost_coeff = 1
-		}
-
 		research_cost = 2
 		start_year = 1941
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -4 y = 8 }
+			position = { x = -1 y = 8 }
 		}
 
 		ai_will_do = {
@@ -384,29 +480,16 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1936
+		start_year = 1938
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = @1936 }
+			position = { x = 2 y = @1937 }
 		}
 
 		ai_will_do = {
 			factor = 2
 
-			modifier = {
-				factor = 2
-				is_major = yes
-				not = {
-					tag = JAP
-					num_of_military_factories < 50
-				}
-				date > "1938.1.1"
-			}
-			modifier = {
-				tag = SOV
-				factor = 1.5
-			}
 			modifier = {
 				factor = 1.1
 				date > "1940.1.1"
@@ -422,11 +505,6 @@ technologies = {
 				date > "1942.1.1"
 			}
 
-			modifier = {
-				factor = 15.0
-				tag = GER
-				has_opinion_modifier = sov_ger_treaty
-			}
 		}
 
 		categories = {
@@ -459,29 +537,17 @@ technologies = {
 			position = { x = 2 y = @1940 }
 		}
 
+		on_research_complete = {
+			
+		}
+
 		ai_will_do = {
 			factor = 3
 
-			modifier = {
-				factor = 2
-				is_major = yes
-				not = {
-					tag = JAP
-					num_of_military_factories < 50
-				}
-			}
+			
 			modifier = {
 				date < "1941.1.1"
 				factor = 0.3
-			}
-			modifier = {
-				factor = 2
-				tag = GER
-			}
-
-			modifier = {
-				factor = 2
-				tag = SOV
 			}
 
 			modifier = {
@@ -526,6 +592,10 @@ technologies = {
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 2 y = @1943 }
+		}
+
+		on_research_complete = {
+			
 		}
 
 		ai_will_do = {
@@ -668,15 +738,7 @@ technologies = {
 				factor = 1.2
 				date > "1939.1.1"
 			}
-			modifier = {
-				tag = FRA
-				factor = 3
-			}
-			modifier = {
-				tag = JAP
-				num_of_military_factories < 100
-				factor = 0
-			}
+			
 		}
 
 		categories = {
@@ -712,13 +774,13 @@ technologies = {
 			position = { x = 5 y = @1940 }
 		}
 
+		on_research_complete = {
+			
+		}
+
 		ai_will_do = {
 			factor = 0.8
-			modifier = {
-				tag = JAP
-				num_of_military_factories < 100
-				factor = 0
-			}
+			
 			modifier = {
 				factor = 1.2
 				date > "1942.1.1"
@@ -762,6 +824,10 @@ technologies = {
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 5 y = @1943 }
+		}
+
+		on_research_complete = {
+			
 		}
 
 		ai_will_do = {
@@ -813,6 +879,10 @@ technologies = {
 			position = { x = 8 y = @1943 }
 		}
 
+		on_research_complete = {
+			
+		}
+
 		ai_will_do = {
 			factor = 0 # Hitler cries on the inside
 		}
@@ -839,10 +909,10 @@ technologies = {
 		show_effect_as_desc = yes
 
 		research_cost = 1
-		start_year = 1934
+		start_year = 1936
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 3 y = @1936 }
+			position = { x = 3 y = @1935 }
 		}
 
 		ai_will_do = {
@@ -894,7 +964,7 @@ technologies = {
 		show_effect_as_desc = yes
 
 		research_cost = 1
-		start_year = 1936
+		start_year = 1938
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 3 y = @1938 }
@@ -1048,7 +1118,7 @@ technologies = {
 		start_year = 1934
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = @1936 }
+			position = { x = 2 y = @1935 }
 		}
 
 		ai_will_do = {
@@ -1098,7 +1168,7 @@ technologies = {
 		show_effect_as_desc = yes
 
 		research_cost = 1
-		start_year = 1936
+		start_year = 1938
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 2 y = @1938 }

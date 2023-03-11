@@ -12,6 +12,7 @@ technologies = {
 	@1945 = 18
 	@1946 = 20
 
+
 	tech_support = {
 
 		enable_equipments = {
@@ -49,20 +50,6 @@ technologies = {
 			leads_to_tech = tech_maintenance_company
 			research_cost_coeff = 1
 		}
-		path = {
-			leads_to_tech = tech_religious_company
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = tech_morale_support
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = tech_psyker_support
-			research_cost_coeff = 1
-		}
-
-
 		research_cost = 1.0
 		start_year = 1918
 		folder = {
@@ -110,7 +97,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = support_folder
-			position = { x = 0 y = 3 }
+			position = { x = 0 y = @1936 }
 		}
 		
 		categories = {
@@ -169,6 +156,9 @@ technologies = {
 			heavy_flame_tank
 		}
 		
+		on_research_complete = {
+			
+		}
 		
 		path = {
 			leads_to_tech = tech_engineers3
@@ -179,7 +169,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = support_folder
-			position = { x = 0 y = 6}
+			position = { x = 0 y = @1939 }
 		}
 		
 		categories = {
@@ -250,7 +240,7 @@ technologies = {
 		start_year = 1942
 		folder = {
 			name = support_folder
-			position = { x = 0 y = 9 }
+			position = { x = 0 y = @1942 }
 		}
 		
 		categories = {
@@ -315,7 +305,7 @@ technologies = {
 		start_year = 1945
 		folder = {
 			name = support_folder
-			position = { x = 0 y = 12 }
+			position = { x = 0 y = @1945 }
 		}
 		
 		categories = {
@@ -361,7 +351,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = support_folder
-			position = { x = 1 y = 3 }
+			position = { x = 2 y = @1936 }
 		}
 		
 		categories = {
@@ -413,7 +403,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = support_folder
-			position = { x = 1 y = 6}
+			position = { x = 2 y = @1939 }
 		}
 		
 		categories = {
@@ -455,7 +445,7 @@ technologies = {
 		start_year = 1942
 		folder = {
 			name = support_folder
-			position = { x = 1 y = 9 }
+			position = { x = 2 y = @1942 }
 		}
 		
 		categories = {
@@ -492,7 +482,7 @@ technologies = {
 		start_year = 1945
 		folder = {
 			name = support_folder
-			position = { x = 1 y = 12 }
+			position = { x = 2 y = @1945 }
 		}
 		
 		categories = {
@@ -535,7 +525,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = support_folder
-			position = { x = 2 y = 3 }
+			position = { x = 4 y = @1936 }
 		}
 		
 		categories = {
@@ -545,6 +535,11 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 0.5
+			
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
 		}
 	}
 	
@@ -564,7 +559,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = support_folder
-			position = { x = 2 y = 6}
+			position = { x = 4 y = @1939 }
 		}
 		
 		categories = {
@@ -596,7 +591,7 @@ technologies = {
 		start_year = 1942
 		folder = {
 			name = support_folder
-			position = { x = 2 y = 9 }
+			position = { x = 4 y = @1942 }
 		}
 		
 		categories = {
@@ -623,7 +618,7 @@ technologies = {
 		start_year = 1945
 		folder = {
 			name = support_folder
-			position = { x = 2 y = 12 }
+			position = { x = 4 y = @1945 }
 		}
 		
 		categories = {
@@ -638,6 +633,20 @@ technologies = {
 				factor = 2
 				has_war = yes
 			}
+		}
+	}
+
+	camicie_nere_security_militias = {
+
+		research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		military_police = {
+			suppression_factor = 0.05
 		}
 	}
 
@@ -656,7 +665,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = support_folder
-			position = { x = 3 y = 3 }
+			position = { x = 6 y = @1936 }
 		}
 		
 		categories = {
@@ -704,7 +713,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = support_folder
-			position = { x = 3 y = 6}
+			position = { x = 6 y = @1939 }
 		}
 		
 		categories = {
@@ -747,7 +756,7 @@ technologies = {
 		start_year = 1942
 		folder = {
 			name = support_folder
-			position = { x = 3 y = 9 }
+			position = { x = 6 y = @1942 }
 		}
 		
 		categories = {
@@ -785,7 +794,7 @@ technologies = {
 		start_year = 1945
 		folder = {
 			name = support_folder
-			position = { x = 3 y = 12 }
+			position = { x = 6 y = @1945 }
 		}
 		
 		categories = {
@@ -825,14 +834,14 @@ technologies = {
 		}
 
 		dependencies = {
-			
+			motorised_infantry = 1
 		}
 
 		research_cost = 2
 		start_year = 1936
 		folder = {
 			name = support_folder
-			position = { x = 4 y = 3 }
+			position = { x = 8 y = @1936 }
 		}
 		
 		categories = {
@@ -877,7 +886,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = support_folder
-			position = { x = 4 y = 6}
+			position = { x = 8 y = @1939 }
 		}
 		
 		categories = {
@@ -921,7 +930,7 @@ technologies = {
 		start_year = 1942
 		folder = {
 			name = support_folder
-			position = { x = 4 y = 9 }
+			position = { x = 8 y = @1942 }
 		}
 		
 		categories = {
@@ -960,7 +969,7 @@ technologies = {
 		start_year = 1945
 		folder = {
 			name = support_folder
-			position = { x = 4 y = 12 }
+			position = { x = 8 y = @1945 }
 		}
 		
 		categories = {
@@ -989,6 +998,15 @@ technologies = {
 		}
 	}
 
+
+	SWI_saint_bernard_tech = { #Saint Bernard tech
+		allow = { always = no } #Only obtained through Focus
+		field_hospital = {
+			casualty_trickleback = 0.20 ## REMEMBER TO UPDATE THE TOOLTIP 
+			experience_loss_factor = -0.3
+		}
+	}
+
 	tech_logistics_company = {
 
 		enable_subunits = {
@@ -1001,14 +1019,14 @@ technologies = {
 		}
 
 		dependencies = {
-			
+			motorised_infantry = 1
 		}
 
 		research_cost = 2
 		start_year = 1936
 		folder = {
 			name = support_folder
-			position = { x = 5 y = 3 }
+			position = { x = 10 y = @1936 }
 		}
 		
 		categories = {
@@ -1058,7 +1076,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = support_folder
-			position = { x = 5 y = 6}
+			position = { x = 10 y = @1939 }
 		}
 		
 		categories = {
@@ -1085,10 +1103,6 @@ technologies = {
 				date > "1942.1.1"
 			}
 
-			modifier = {
-				factor = 2
-				tag = GER
-			}
 		}
 	}
 	
@@ -1107,7 +1121,7 @@ technologies = {
 		start_year = 1942
 		folder = {
 			name = support_folder
-			position = { x = 5 y = 9 }
+			position = { x = 10 y = @1942 }
 		}
 		
 		categories = {
@@ -1146,7 +1160,7 @@ technologies = {
 		start_year = 1945
 		folder = {
 			name = support_folder
-			position = { x = 5 y = 12 }
+			position = { x = 10 y = @1945 }
 		}
 		
 		categories = {
@@ -1188,13 +1202,15 @@ technologies = {
 		}
 
 		dependencies = {
+			radio = 1
+			motorised_infantry = 1
 		}
 
 		research_cost = 2
 		start_year = 1936
 		folder = {
 			name = support_folder
-			position = { x = 6 y = 3 }
+			position = { x = 12 y = @1936 }
 		}
 		
 		categories = {
@@ -1230,7 +1246,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = support_folder
-			position = { x = 6 y = 6}
+			position = { x = 12 y = @1939 }
 		}
 		
 		categories = {
@@ -1273,7 +1289,7 @@ technologies = {
 		start_year = 1942
 		folder = {
 			name = support_folder
-			position = { x = 6 y = 9 }
+			position = { x = 12 y = @1942 }
 		}
 		
 		categories = {
@@ -1311,497 +1327,7 @@ technologies = {
 		start_year = 1945
 		folder = {
 			name = support_folder
-			position = { x = 6 y = 12 }
-		}
-		
-		categories = {
-			support_tech
-			signal_company_tech
-			electronics
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.2
-				date > "1946.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1947.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1948.1.1"
-			}
-		}
-	}
-
-	tech_psyker_support = {
-
-		enable_subunits = {
-			psyker_company
-		}
-		
-		path = {
-			leads_to_tech = tech_psyker_support2
-			research_cost_coeff = 1
-		}
-
-		dependencies = {
-		}
-
-		research_cost = 2
-		start_year = 1936
-		folder = {
-			name = support_folder
-			position = { x = 9 y = 3 }
-		}
-		
-		categories = {
-			support_tech
-			signal_company_tech
-			electronics
-		}
-		
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 5
-				is_major = yes
-				date > "1940.1.1"
-			}
-		}
-	}
-	
-	tech_psyker_support2 = {
-
-		psyker_company = {
-			initiative = 0.12
-		}
-		
-		
-		path = {
-			leads_to_tech = tech_psyker_support3
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.5
-		start_year = 1939
-		folder = {
-			name = support_folder
-			position = { x = 9 y = 6}
-		}
-		
-		categories = {
-			support_tech
-			signal_company_tech
-			electronics
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.2
-				date > "1937.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1938.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1939.1.1"
-			}
-		}
-	}
-	
-	tech_psyker_support3 = {
-
-		psyker_company = {
-			initiative = 0.12
-		}
-		path = {
-			leads_to_tech = tech_psyker_support4
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.5
-		start_year = 1942
-		folder = {
-			name = support_folder
-			position = { x = 9 y = 9 }
-		}
-		
-		categories = {
-			support_tech
-			signal_company_tech
-			electronics
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.2
-				date > "1943.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1944.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1945.1.1"
-			}
-		}
-	}
-
-	tech_psyker_support4 = {
-
-		psyker_company = {
-			initiative = 0.12
-		}
-
-		research_cost = 1.5
-		start_year = 1945
-		folder = {
-			name = support_folder
-			position = { x = 9 y = 12 }
-		}
-		
-		categories = {
-			support_tech
-			signal_company_tech
-			electronics
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.2
-				date > "1946.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1947.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1948.1.1"
-			}
-		}
-	}
-
-	tech_morale_support = { #Commisar, Nob Squad
- 
-		enable_subunits = {
-			morale_company
-		}
-		
-		path = {
-			leads_to_tech = tech_morale_support2
-			research_cost_coeff = 1
-		}
-
-		dependencies = {
-		}
-
-		research_cost = 2
-		start_year = 1936
-		folder = {
-			name = support_folder
-			position = { x = 10 y = 3 }
-		}
-		
-		categories = {
-			support_tech
-			signal_company_tech
-			electronics
-		}
-		
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 5
-				is_major = yes
-				date > "1940.1.1"
-			}
-		}
-	}
-	tech_morale_support2 = {
-
-		morale_company = {
-			initiative = 0.12
-		}
-		
-		path = {
-			leads_to_tech = tech_morale_support3
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.5
-		start_year = 1939
-		folder = {
-			name = support_folder
-			position = { x = 10 y = 6}
-		}
-		
-		categories = {
-			support_tech
-			signal_company_tech
-			electronics
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.2
-				date > "1937.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1938.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1939.1.1"
-			}
-		}
-	}
-	tech_morale_support3 = {
-
-		morale_company = {
-			initiative = 0.12
-		}
-		path = {
-			leads_to_tech = tech_morale_support4
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.5
-		start_year = 1942
-		folder = {
-			name = support_folder
-			position = { x = 10 y = 9 }
-		}
-		
-		categories = {
-			support_tech
-			signal_company_tech
-			electronics
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.2
-				date > "1943.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1944.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1945.1.1"
-			}
-		}
-	}
-	tech_morale_support4 = {
-
-		morale_company = {
-			initiative = 0.12
-		}
-
-		research_cost = 1.5
-		start_year = 1945
-		folder = {
-			name = support_folder
-			position = { x = 10 y = 12 }
-		}
-		
-		categories = {
-			support_tech
-			signal_company_tech
-			electronics
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.2
-				date > "1946.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1947.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1948.1.1"
-			}
-		}
-	}
-
-	tech_religious_company = {
-
-		enable_subunits = {
-            religious_company
-        }
-		
-		path = {
-			leads_to_tech = tech_religious_company2
-			research_cost_coeff = 1
-		}
-
-		dependencies = {
-		}
-
-		research_cost = 2
-		start_year = 1936
-		folder = {
-			name = support_folder
-			position = { x = 11 y = 3 }
-		}
-		
-		categories = {
-			support_tech
-			signal_company_tech
-			electronics
-		}
-		
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 5
-				is_major = yes
-				date > "1940.1.1"
-			}
-		}
-	}
-	
-	tech_religious_company2 = {
-
-		religious_company = {
-			initiative = 0.12
-		}
-		
-		path = {
-			leads_to_tech = tech_religious_company3
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.5
-		start_year = 1939
-		folder = {
-			name = support_folder
-			position = { x = 11 y = 6}
-		}
-		
-		categories = {
-			support_tech
-			signal_company_tech
-			electronics
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.2
-				date > "1937.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1938.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1939.1.1"
-			}
-		}
-	}
-	
-	tech_religious_company3 = {
-
-		religious_company = {
-			initiative = 0.12
-		}
-		path = {
-			leads_to_tech = tech_religious_company4
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.5
-		start_year = 1942
-		folder = {
-			name = support_folder
-			position = { x = 11 y = 9 }
-		}
-		
-		categories = {
-			support_tech
-			signal_company_tech
-			electronics
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.2
-				date > "1943.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1944.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1945.1.1"
-			}
-		}
-	}
-	tech_religious_company4 = {
-
-		religious_company = {
-			initiative = 0.12
-		}
-
-		research_cost = 1.5
-		start_year = 1945
-
-		folder = {
-			name = support_folder
-			position = { x = 11 y = 12 }
+			position = { x = 12 y = @1945 }
 		}
 		
 		categories = {
@@ -1837,7 +1363,6 @@ technologies = {
 
 		research_cost = 1.5
 		start_year = 1910
-        
 		folder = {
 			name = support_folder
 			position = { x = 0 y = @1918 }
@@ -1905,13 +1430,6 @@ technologies = {
 				factor = 2
 			}
 
-			modifier = {
-				OR = {
-					TAG = GER
-					tag = SOV
-				}
-				factor = 1.5
-			}
 		}
 	}
 
@@ -1924,7 +1442,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = support_folder
-			position = { x = 0 y = 6}
+			position = { x = 0 y = @1939 }
 		}
 		
 		categories = {
@@ -1992,10 +1510,6 @@ technologies = {
 				factor = 20
 			}
 			modifier = {
-				tag = GER
-				factor = 5
-			}
-			modifier = {
 				factor = 1.2
 				date > "1938.1.1"
 			}
@@ -2011,4 +1525,5 @@ technologies = {
 			}
 		}
 	}
+
 }
