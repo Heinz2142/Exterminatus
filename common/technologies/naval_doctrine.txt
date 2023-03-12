@@ -2319,7 +2319,8 @@ technologies = {
 			factor = 1
 			modifier = {
 				has_war = yes
-				factor 
+				factor = 5
+			}
 			modifier = {
 				has_navy_experience > 120
 				factor = 2
