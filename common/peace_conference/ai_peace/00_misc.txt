@@ -167,11 +167,6 @@ peace_ai_desires = {
     # Countries the ai should be more unlikely to release in a peace deal
     unlikely_countries = {
         peace_action_type = liberate
-        enable = {
-            FROM = {
-                is_unlikely_country_tag = yes
-            }
-        }
         ai_desire = -85  # 85 percent lower desire
     }
 
@@ -179,11 +174,6 @@ peace_ai_desires = {
     # Countries the ai should be more unlikely to puppet in a peace deal
     unlikely_countries = {
         peace_action_type = puppet
-        enable = {
-            FROM = {
-                is_unlikely_country_tag = yes
-            }
-        }
         ai_desire = -50  # 50 percent lower desire (slightly more keen to puppet than to liberate)
     }
 
@@ -600,9 +590,6 @@ peace_ai_desires = {
                     tag = ROOT.FROM
                 }
             }
-            ROOT.FROM = {
-                NOT = { has_same_ideology = yes }
-            }
         }
         ai_desire = -20
     }
@@ -803,7 +790,6 @@ peace_ai_desires = {
                         pc_is_forced_government_by = ROOT
                         AND = {
                             country_exists = THIS #Ie - has provinces already and isn't a new creation
-                            has_same_ideology = yes
                         }
                         is_in_faction_with = ROOT
                     }

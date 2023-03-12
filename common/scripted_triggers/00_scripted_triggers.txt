@@ -309,10 +309,6 @@ has_same_ideology = {
 				has_government = communism
 				ROOT = { has_government = communism }
 			}
-			AND = {
-				has_government = neutrality
-				ROOT = { has_government = neutrality }
-			}
 		}
 	}
 }
@@ -429,6 +425,5 @@ country_can_be_reasonable_target_of_wargoal = { #Expected scopes: Target country
 }
 
 is_unlikely_country_tag = {
-	OR = {
-	}
+
 }
