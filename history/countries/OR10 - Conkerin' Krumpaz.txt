@@ -1,4 +1,4 @@
-﻿capital = 
+﻿capital = ""
 
 create_country_leader = {
 	name = "Vargrub Snagbuttz"

@@ -167,7 +167,6 @@ ideas = {
 		flexible_contracts_spirit = {
 			ledger = navy
 			modifier = {
-				naval_manufacturer_cost_factor = -0.8
 				ship_hull_cruiser_design_cost_factor = -0.6
 			}
 			ai_will_do = {
@@ -402,15 +401,5 @@ ideas = {
 				}
 			}
 		} 
-		bureau_of_ordnance_spirit = {
-			ledger = navy
-			visible = { tag = USA }
-			modifier = {
-				naval_torpedo_hit_chance_factor = -0.1
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
 	}
 }
