@@ -103,6 +103,9 @@ technology_categories = {
 	cat_air_guns
 	cat_air_engine
 	cat_air_bombs
+	industrial_military
+	industrial_slavery
+	industrial_cap
 }
 
 technology_folders = {
