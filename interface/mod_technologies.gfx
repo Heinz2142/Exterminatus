@@ -103,6 +103,15 @@ spriteTypes = {
 		name = "GFX_3_generation_punishment_medium"
 		texturefile = "gfx/interface/technologies/Imperial/3_generation_punishment.dds"
 	}		
+	
+	
+	#Tier 1 Greenskins Techs#
+	
+	#Tier 2 Greenskins Techs#
+	
+	#Tier 3 GreenSkins Techs#
+	
+	#Tier 4 GreenSkins Techs#
 
 
 }

@@ -1,0 +1,8 @@
+﻿l_english:
+  imperium_folder:0 "Infantry"
+  imperium_folder_desc:0 "Equipment and weapons for forces of the imperium."
+  greenskins_folder:0 "Infantry"
+  greenskins_folder_desc:0 "More and better dakka"
+
+  imperium_weapons:0 "Infantry weapons"
+  greenskins_weapons:0 "Infantry weapons"

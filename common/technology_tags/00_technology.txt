@@ -103,13 +103,24 @@ technology_categories = {
 	cat_air_guns
 	cat_air_engine
 	cat_air_bombs
-	industrial_military
-	industrial_slavery
-	industrial_cap
+	imperium_weapons
+	greenskins_weapons
 }
 
 technology_folders = {
 	infantry_folder = {
+		available  = { 
+		NOT = {has_idea = race_greenskins} 
+		NOT = {has_idea = race_human} 
+		}
+		ledger = army
+	}
+	imperium_folder = {
+		available  = { has_idea = race_human }
+		ledger = army
+	}
+	greenskins_folder = {
+		available  = { has_idea = race_greenskins }
 		ledger = army
 	}
 	support_folder = {
@@ -180,5 +191,3 @@ technology_folders = {
 	}
 	#secret_weapons_folder
 }
-
- 
